@@ -22,7 +22,7 @@ include "login/login/Confirm.php";
 <td style="text-align: right;">Nick or Email:</td><td><input type="text" placeholder="Nick or Email" name="user"></td>
 </tr>
 <tr>
-<td style="text-align: right;">Password</td><td><input type="password" placeholder="Password" name="password"></td>
+<td style="text-align: right;">Password:</td><td><input type="password" placeholder="Password" name="password"></td>
 </tr>
 </table>
 <input type="hidden" name="login">

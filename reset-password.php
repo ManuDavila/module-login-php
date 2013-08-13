@@ -22,10 +22,10 @@ include "login/login/Get-number-reset.php";
 <td style="text-align: right;">Email:</td><td><input type="text" placeholder="Email" name="email"></td>
 </tr>
 <tr>
-<td style="text-align: right;">Password</td><td><input type="password" placeholder="Password" name="password"></td>
+<td style="text-align: right;">Password:</td><td><input type="password" placeholder="Password" name="password"></td>
 </tr>
 <tr>
-<td style="text-align: right;">Repeat Password</td><td><input type="password" placeholder="Repeat Password" name="repeat_password"></td>
+<td style="text-align: right;">Repeat Password:</td><td><input type="password" placeholder="Repeat Password" name="repeat_password"></td>
 </tr>
 </table>
 <input type="hidden" name="reset_password" value="<?php echo $reset; ?>">

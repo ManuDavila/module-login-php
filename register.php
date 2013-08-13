@@ -81,10 +81,10 @@ $("#check_password").val(this.value);
 <td style="text-align: right;">Email:</td><td><input type="text" id="email" placeholder="Email" name="email"><div id="email_request"></div></td>
 </tr>
 <tr>
-<td style="text-align: right;">Password</td><td><input type="password" id="password" placeholder="Password" name="password"><div id="password_request"></div></td>
+<td style="text-align: right;">Password:</td><td><input type="password" id="password" placeholder="Password" name="password"><div id="password_request"></div></td>
 </tr>
 <tr>
-<td style="text-align: right;">Repeat Password</td><td><input type="password" id="password_repeat" placeholder="Repeat Password" name="repeat_password"></td>
+<td style="text-align: right;">Repeat Password:</td><td><input type="password" id="password_repeat" placeholder="Repeat Password" name="repeat_password"></td>
 </tr>
 </table>
 <input type="hidden" name="register">
