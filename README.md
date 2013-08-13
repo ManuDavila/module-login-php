@@ -1,5 +1,11 @@
 Module Login PHP is a module base for users: login, register and recover password.
 
+Sites description:
+
+English: http:http://php-estudios.blogspot.com.es/2013/08/module-login-php.html
+
+Spanish: http://php-estudios.blogspot.com.es/2013/08/modulo-para-login-de-usuarios-php.html
+
 Module properties:
 
 � Ajax request for validate input value
