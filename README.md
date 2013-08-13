@@ -2,18 +2,26 @@ Module Login PHP is a module base for users: login, register and recover passwor
 
 Module properties:
 
-· Ajax request for validate input value
-· Filter data
-· Confirmation email in the Register and  Recover password
-· Encryptation of password
-· File for users table for install in mysql
-· Support  for the gravatar images
-· sessions for private sites
+ï¿½ Ajax request for validate input value
+
+ï¿½ Filter data
+
+ï¿½ Confirmation email in the Register and  Recover password
+
+ï¿½ Encryptation of password
+
+ï¿½ File for users table for install in mysql
+
+ï¿½ Support  for the gravatar images
+
+ï¿½ sessions for private sites
+
 
 Configuration:
 
-· Download on github and extract in your folder project.
-· Config the file login/config.php
+ï¿½ Download on github and extract in your folder project.
+
+ï¿½ Config the file login/config.php
 
 //include email from notifications
 define("email_admin", "youremail@here.com");
@@ -21,16 +29,16 @@ define("email_admin", "youremail@here.com");
 //include title from web
 define("title_web", "Your title web");
 
-· Config the file login/connection.php
+ï¿½ Config the file login/connection.php
 
 //include connection to data base
 $connection = new mysqli("localhost", "root", "yourpass", "yourdatabase");
 
-· Install the users table in your mysql data base, the file is login/users.sql.
+ï¿½ Install the users table in your mysql data base, the file is login/users.sql.
 
-· Finally check the application, go to login.php or register.php
+ï¿½ Finally check the application, go to login.php or register.php
 
-· If you need include the private session in the some file, simply include the next code in the file ...
+ï¿½ If you need include the private session in the some file, simply include the next code in the file ...
 
 include "login/login/Session.php";
 
