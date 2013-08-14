@@ -71,12 +71,6 @@ include "login/login/Session.php";
 
 <i>DEMO</i>:  http://recursos-web.comoj.com/module-login-php/login.php
 
-Descargar desde enlace directo a github ... Module Login PHP
-
-O clonarlo ...
-
- git clone https://github.com/ManuDavila/module-login-php.git
-
 <b>Propiedades del módulo</b>
 
 - Respuesta Ajax para validar los campos
