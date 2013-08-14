@@ -1,7 +1,5 @@
 <h3>Module Login PHP</h3> is a module base for users: login, register and recover password.
 
-<i>DEMO:</i> http://recursos-web.comoj.com/module-login-php/login.php
-
 <b>Sites description:</b>
 
 English: http://php-estudios.blogspot.com.es/2013/08/module-login-php.html
@@ -67,8 +65,6 @@ include "login/login/Session.php";
 
 
 <h3>Module Login PHP</h3>  es un módulo base para el sistema de usuarios: iniciar sesión, registrar y recuperar password.
-
-<i>DEMO</i>:  http://recursos-web.comoj.com/module-login-php/login.php
 
 <b>Propiedades del módulo</b>
 
