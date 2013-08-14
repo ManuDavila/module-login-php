@@ -127,7 +127,7 @@ $lang_Ajax = array
 "email_error_char" => "Email: Not more that 50 char",
 "email_available" => "Email available",
 "email_not_available" => "Email not available",
-"passwor_required" => "Password: required numbers and letters",
+"password_required" => "Password: required numbers and letters",
 "password_error_char" => "Password: between 8 and 16 char",
 "valid_password" => "Valid password"
 );
