@@ -100,11 +100,11 @@ if (copy("http://www.gravatar.com/avatar/" . $mail_hash . "?s=" . $size_avatar .
 	{
 	unlink($avatar);
 	}
-}
-	else
+  	else
 	{
 	   $avatar = "avatars/gravatar.jpg";
 	}
+}
 	
 $query = "INSERT INTO users(nick, email, password, avatar, confirm, reset) VALUES('$nick', '$email', '".md5($password)."', '$avatar', '$confirm', '$reset')";
 $result = $connection -> query($query);
