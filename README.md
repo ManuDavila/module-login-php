@@ -33,27 +33,27 @@ Spanish: http://php-estudios.blogspot.com.es/2013/08/modulo-para-login-de-usuari
 
 - <b>Config the file login/config.php</b>
 
-<span style="color: green;">//include email from notifications</span>
+//include email from notifications
 
 define("email_admin", "youremail@here.com");
 
-<span style="color: green;">//include title from web</span>
+//include title from web
 
 define("title_web", "Your title web");
 
-<span style="color: green;">//include the language options. Availables: en.php | es.php</span>
+//include the language options. Availables: en.php | es.php
 
 include "login/language/en.php";
 
 - <b>Modify the language option in the file ... login/ajax/Ajax.php</b>
 
-<span style="color: green;">//include the language options. Availables: en.php | es.php</span>
+//include the language options. Availables: en.php | es.php
 
 include "../language/en.php";
 
 - <b>Config the file login/connection.php</b>
 
-<span style="color: green;">//include connection to data base</span>
+//include connection to data base
 
 $connection = new mysqli("localhost", "root", "yourpass", "yourdatabase");
 
