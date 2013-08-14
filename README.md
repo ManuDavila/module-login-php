@@ -123,7 +123,7 @@ $connection = new mysqli("localhost", "root", "yourpass", "yourdatabase");
 
 - <b>Finalmente comprueba la aplicación, ve a login.php o register.php</b>
 
- <b>Si necesitas incluir sesiones privadas en algún archivo, simplemente incluye el siguiente código ...</b>
+- <b>Si necesitas incluir sesiones privadas en algún archivo, simplemente incluye el siguiente código ...</b>
  
 include "login/login/Session.php";
 
