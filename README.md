@@ -116,24 +116,6 @@ include "login/language/es.php";
 
 //incluye la conexión a tu base de datos
 
-//incluye el título de tu web
-
-define("title_web", "Your title web");
- 
-//incluye la opción del lenguage. Disponibles: en.php | es.php
-
-include "login/language/es.php";
-
-- <b>Modificar la opción del lenguaje al español en el archivo ... login/ajax/Ajax.php</b>
- 
-//incluye la opción del lenguage. Disponibles: en.php | es.php
-
-include "login/language/es.php";
-
-- <b>Configuración del archivo login/connection.php</b>
-
-//incluye la conexión a tu base de datos
-
 $connection = new mysqli("localhost", "root", "yourpass", "yourdatabase");
 
 - <b>Instala la tabla users en tu base de datos mysql, el archivo es login/users.sql</b>
