@@ -29,13 +29,13 @@ return;
 
 if (!preg_match("/^[0-9a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_]+$/", $nick))
 {
-$msg_register = "Nick Error";
+$msg_register = $lang_Register["nick_error"];
 return;
 }
 
 if (strlen($nick) < 3 || strlen($nick) > 50)
 {
-$msg_register = "Between 3 and 50 char";
+$msg_register = $lang_Register["nick_error_char"];
 return;
 }
 
@@ -44,19 +44,19 @@ $result_nick = $connection -> query($query_nick);
 $row_nick = $result_nick -> fetch_array();
 if (!empty($row_nick))
 {
-$msg_register = "Error: The Nick exist";
+$msg_register = $lang_Register["nick_exist"];
 return;
 }
 
-if (!preg_match("/^[a-zA-Z0-9_-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/", $email))
+if (!preg_match("/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/", $email))
 {
-$msg_register = "Email Error";
+$msg_register = $lang_Register["email_error"];
 return;
 }
 
 if (strlen($email) > 50)
 {
-$msg_register = "Not more that 50 char";
+$msg_register = $lang_Register["email_error_char"];
 return;
 }
 
@@ -65,24 +65,24 @@ $result_email = $connection -> query($query_email);
 $row_email = $result_email -> fetch_array();
 if (!empty($row_email))
 {
-$msg_register = "Error: The email exist";
+$msg_register = $lang_Register["email_exist"];
 return;
 }
 
 if (!preg_match("/^([a-zA-Z]+[0-9]+)|([0-9]+[a-zA-Z]+)/i", $password))
 {
-$msg_register = "Password Error";
+$msg_register = $lang_Register["password_error"];
 return;
 }
 else if(strlen($password) < 8 || strlen($password) > 16)
 {
-$msg_register = "Password Error: between 8 and 16 char";
+$msg_register = $lang_Register["password_error_char"];
 return;
 }
 
 if ($repeat_password != $password)
 {
-$msg_register = "Password Repeat Error";
+$msg_register = $lang_Register["password_repeat_error"];
 return;
 }
 
@@ -111,11 +111,11 @@ $from = email_admin;
 $title_web = title_web;
 $titulo = utf8_encode($title_web);
 $mensaje = utf8_encode
-("<b>Welcome <a href='$router'>$title_web</a> ...</b>
+("<b>".$lang_Register["welcome"]." <a href='$router'>$title_web</a> ...</b>
 <br><br> 
-Click in the next link for confirmation ...  <a href='".$router."login.php?confirm=$confirm'>CONFIRM</a>
+".$lang_Register["msg_email"]." ...  <a href='".$router."login.php?confirm=$confirm'>".$lang_Register["confirm"]."</a>
 <br><br>
-Regards.
+".$lang_Register["regards"]."
 ");
 
 $cabeceras = "From: $from" . "\r\n" .
@@ -126,8 +126,7 @@ $cabeceras = "From: $from" . "\r\n" .
 $mail = mail($to, $titulo, $mensaje, $cabeceras);
 
 if ($mail){
-$msg_register = "<span style='color: blue;'>Please, check in your account email for confirmation.</span>";
-return;
+$msg_register = "<span style='color: blue;'>".$lang_Register["please"]."</span>";
 }
 }
 }

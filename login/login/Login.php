@@ -9,20 +9,20 @@ if (empty($user) || empty($password))
 return;
 }
 
-if (!preg_match("/^[0-9a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_]+$/", $user) && !preg_match("/^[a-zA-Z0-9_-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/", $user))
+if (!preg_match("/^[0-9a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_]+$/", $user) && !preg_match("/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/", $user))
 {
-$msg_login = "User Error";
+$msg_login = $lang_Login["user_error"];
 return;
 }
 
 if (!preg_match("/^([a-zA-Z]+[0-9]+)|([0-9]+[a-zA-Z]+)/i", $password))
 {
-$msg_login = "Password Error";
+$msg_login = $lang_Login["password_error"];
 return;
 }
 else if(strlen($password) < 8 || strlen($password) > 16)
 {
-$msg_login = "Password Error: between 8 and 16 char";
+$msg_login = $lang_Login["password_error_char"];
 return;
 }
 
@@ -31,7 +31,7 @@ $result = $connection -> query($query);
 $row = $result -> fetch_array();
 if (empty($row))
 {
-$msg_login = "Error login";
+$msg_login = $lang_Login["login_error"];
 return;
 }
 else

@@ -11,6 +11,8 @@ $router = str_replace("register.php", "", $router);
 $router = str_replace("recover-password.php", "", $router);
 $router = "http://" . $router;
 
+//include the language options. Availables: en.php | es.php
+include "login/language/en.php";
 include "login/connection.php";
 include "login/login/Login.php";
 include "login/login/Register.php";

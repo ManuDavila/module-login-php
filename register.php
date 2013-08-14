@@ -4,7 +4,7 @@ include "login/config.php";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Register</title>
+<title><?php echo $lang_register["register"]; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script src="http://code.jquery.com/jquery.js"></script>
@@ -70,27 +70,27 @@ $("#check_password").val(this.value);
 <body>
 <center>
 <br><br><br><br>
-<h3>REGISTER:</h3>
+<h3><?php echo $lang_register["register"]; ?>:</h3>
 <strong style="color: red;"><?php echo $msg_register; ?></strong>
 <form method="post">
 <table class="table table-striped">
 <tr>
-<td style="text-align: right;">Nick:</td><td><input type="text" id="nick" placeholder="Nick" name="nick"><div id="nick_request"></div></td>
+<td style="text-align: right;"><?php echo $lang_register["nick"]; ?>:</td><td><input type="text" id="nick" placeholder="<?php echo $lang_register["nick"]; ?>" name="nick"><div id="nick_request"></div></td>
 </tr>
 <tr>
-<td style="text-align: right;">Email:</td><td><input type="text" id="email" placeholder="Email" name="email"><div id="email_request"></div></td>
+<td style="text-align: right;"><?php echo $lang_register["email"]; ?>:</td><td><input type="text" id="email" placeholder="<?php echo $lang_register["email"]; ?>" name="email"><div id="email_request"></div></td>
 </tr>
 <tr>
-<td style="text-align: right;">Password:</td><td><input type="password" id="password" placeholder="Password" name="password"><div id="password_request"></div></td>
+<td style="text-align: right;"><?php echo $lang_register["password"]; ?>:</td><td><input type="password" id="password" placeholder="<?php echo $lang_register["password"]; ?>" name="password"><div id="password_request"></div></td>
 </tr>
 <tr>
-<td style="text-align: right;">Repeat Password:</td><td><input type="password" id="password_repeat" placeholder="Repeat Password" name="repeat_password"></td>
+<td style="text-align: right;"><?php echo $lang_register["repeat_password"]; ?>:</td><td><input type="password" id="password_repeat" placeholder="<?php echo $lang_register["repeat_password"]; ?>" name="repeat_password"></td>
 </tr>
 </table>
 <input type="hidden" name="register">
-<button type="submit" class="btn">Send</button>
+<button type="submit" class="btn"><?php echo $lang_register["send"]; ?></button>
 <br>
-<a href="login.php">Back to login</a>
+<a href="login.php"><?php echo $lang_register["back_to_login"]; ?></a>
 </form>
 
 <form id="form_check_nick" method="post">

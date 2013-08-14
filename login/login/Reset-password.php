@@ -12,9 +12,9 @@ if (empty($email) || empty($password) || empty($repeat_password))
 return;
 }
 
-if (!preg_match("/^[a-zA-Z0-9_-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/", $email))
+if (!preg_match("/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/", $email))
 {
-$msg_reset = "Email Error";
+$msg_reset = $lang_Reset_password["email_error"];
 return;
 }
 
@@ -30,18 +30,18 @@ return;
 
 if (!preg_match("/^([a-zA-Z]+[0-9]+)|([0-9]+[a-zA-Z]+)/i", $password))
 {
-$msg_reset = "Password Error";
+$msg_reset = $lang_Reset_password["password_error"];
 return;
 }
 else if(strlen($password) < 8 || strlen($password) > 16)
 {
-$msg_reset = "Password Error: between 8 and 16 char";
+$msg_reset = $lang_Reset_password["password_error_char"];
 return;
 }
 
 if ($repeat_password != $password)
 {
-$msg_reset = "Password Repeat Error";
+$msg_reset = $lang_Reset_password["password_repeat_error"];
 return;
 }
 	
@@ -58,7 +58,7 @@ $result = $connection -> query($query);
 
 if ($result)
 {
-$msg_reset = "<span style='color: blue;'>Reset password, successful.</span>";
+$msg_reset = "<span style='color: blue;'>".$lang_Reset_password["msg"]."</span>";
 }
 }
 ?>

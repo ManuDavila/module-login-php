@@ -8,9 +8,9 @@ if (empty($email))
 return;
 }
 
-if (!preg_match("/^[a-zA-Z0-9_-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/", $email))
+if (!preg_match("/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/", $email))
 {
-$msg_recover = "Email Error";
+$msg_recover = $lang_Recover_password["email_error"];
 return;
 }
 
@@ -19,7 +19,7 @@ $result = $connection -> query($query);
 $row = $result -> fetch_array();
 if (empty($row))
 {
-$msg_recover = "Email no exist";
+$msg_recover = $lang_Recover_password["email_no_exist"];
 return;
 }
 else
@@ -41,11 +41,11 @@ $from = email_admin;
 $title_web = title_web;
 $titulo = utf8_encode($title_web);
 $mensaje = utf8_encode
-("<b>Welcome <a href='$router'>$title_web</a> ...</b>
+("<b>".$lang_Recover_password["welcome"]." <a href='$router'>$title_web</a> ...</b>
 <br><br>
-Click in the next link for reset password ...  <a href='".$router."reset-password.php?reset=$reset'>RESET PASSWORD</a>
+".$lang_Recover_password["msg_email"]." ...  <a href='".$router."reset-password.php?reset=$reset'>".$lang_Recover_password["reset_password"]."</a>
 <br><br>
-Regards.
+".$lang_Recover_password["regards"]."
 ");
 
 $cabeceras = "From: $from" . "\r\n" .
@@ -56,7 +56,7 @@ $cabeceras = "From: $from" . "\r\n" .
 $mail = mail($to, $titulo, $mensaje, $cabeceras);
 
 if ($mail){
-$msg_recover = "<span style='color: blue;'>Please, check in your account email for reset password.</span>";
+$msg_recover = "<span style='color: blue;'>".$lang_Recover_password["please"]."</span>";
 return;
 }
 }

@@ -4,7 +4,7 @@ include "login/config.php";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Recover password</title>
+<title><?php echo $lang_recover_password["recover_password"]; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script src="http://code.jquery.com/jquery.js"></script>
@@ -13,18 +13,18 @@ include "login/config.php";
 <body>
 <center>
 <br><br><br><br>
-<h3>RECOVER PASSWORD:</h3>
+<h3><?php echo $lang_recover_password["recover_password"]; ?>:</h3>
 <strong style="color: red;"><?php echo $msg_recover; ?></strong>
 <form method="post">
 <table class="table table-striped">
 <tr>
-<td style="text-align: right;">Email:</td><td><input type="text" placeholder="Email" name="email"></td>
+<td style="text-align: right;"><?php echo $lang_recover_password["email"]; ?>:</td><td><input type="text" placeholder="<?php echo $lang_recover_password["email"]; ?>" name="email"></td>
 </tr>
 </table>
 <input type="hidden" name="recover_password">
-<button type="submit" class="btn">Recover password</button>
+<button type="submit" class="btn"><?php echo $lang_recover_password["recover_password"]; ?></button>
 <br>
-<a href="login.php">Back to login</a>
+<a href="login.php"><?php echo $lang_recover_password["back_to_login"]; ?></a>
 </form>
 </center>
 </body>
