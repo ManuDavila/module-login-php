@@ -1,6 +1,6 @@
 <?php
-include "login/config.php";
 include "login/login/Session.php";
+include "login/config.php";
 ?>
 <!DOCTYPE HTML>
 <html>
