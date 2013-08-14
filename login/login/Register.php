@@ -92,9 +92,15 @@ $mail_hash = md5(strtolower(trim($email)));
     $rand = rand(10000, 99999);
     $cad = $rand . "-" . $nick . ".jpg";
 
-if (copy("http://www.gravatar.com/avatar/" . $mail_hash . "?s=" . $size_avatar . "&d=404", "avatars/" . $cad)) {
+if (copy("http://www.gravatar.com/avatar/" . $mail_hash . "?s=" . $size_avatar . "&d=404", "avatars/" . $cad)) 
+{
         $avatar = "avatars/" . $cad;
-    }
+		
+ if (filesize($avatar) < 15)
+	{
+	unlink($avatar);
+	}
+}
 	else
 	{
 	   $avatar = "avatars/gravatar.jpg";
