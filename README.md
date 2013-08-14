@@ -72,33 +72,9 @@ include "login/login/Session.php";
 
 <b>Propiedades del módulo</b>
 
-<h3>Module Login PHP</h3>  es un módulo base para el sistema de usuarios: iniciar sesión, registrar y recuperar password.
-
-<i>DEMO</i>:  http://recursos-web.comoj.com/module-login-php/login.php
-
-<b>Propiedades del módulo</b>
-
 - Respuesta Ajax para validar los campos
 
 - Filtrado de datos
-
-- Configuración del lenguaje. Default en inglés. Disponibles: inglés y español.
-
-- Email de confirmación para el registro y recuperar password
-
-- Encriptación de password
-
-- Archivo sql para instalar la tabla users
-
-- Soporte para imágenes gravatar
-
-- Sesiones para zonas privadas
-
-<b>Configuración:</b>
-
-- <b>Descargar en github y extraer los archivos en la carpeta de tu proyecto.</b>
-
-- <b>Configuración del archivo login/config.php</b>
 
 - Configuración del lenguaje. Default en inglés. Disponibles: inglés y español.
 
@@ -161,10 +137,6 @@ include "login/language/es.php";
 $connection = new mysqli("localhost", "root", "yourpass", "yourdatabase");
 
 - <b>Instala la tabla users en tu base de datos mysql, el archivo es login/users.sql</b>
-
-- <b>Finalmente comprueba la aplicación, ve a login.php o register.php</b>
-
-- <b>Si necesitas incluir sesiones privadas en algún archivo, simplemente incluye el siguiente código ...</b>
 
 - <b>Finalmente comprueba la aplicación, ve a login.php o register.php</b>
 
