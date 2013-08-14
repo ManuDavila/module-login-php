@@ -1,6 +1,6 @@
-Module Login PHP is a module base for users: login, register and recover password.
+<h3>Module Login PHP</h3> is a module base for users: login, register and recover password.
 
-DEMO: http://recursos-web.comoj.com/module-login-php/login.php
+<i>DEMO:</i> http://recursos-web.comoj.com/module-login-php/login.php
 
 <b>Sites description:</b>
 
@@ -33,27 +33,27 @@ Spanish: http://php-estudios.blogspot.com.es/2013/08/modulo-para-login-de-usuari
 
 - <b>Config the file login/config.php</b>
 
-//include email from notifications
+<span style="color: green;">//include email from notifications</span>
 
 define("email_admin", "youremail@here.com");
 
-//include title from web
+<span style="color: green;">//include title from web</span>
 
 define("title_web", "Your title web");
 
-//include the language options. Availables: en.php | es.php
+<span style="color: green;">//include the language options. Availables: en.php | es.php</span>
 
 include "login/language/en.php";
 
 - <b>Modify the language option in the file ... login/ajax/Ajax.php</b>
 
-//include the language options. Availables: en.php | es.php
+<span style="color: green;">//include the language options. Availables: en.php | es.php</span>
 
 include "../language/en.php";
 
 - <b>Config the file login/connection.php</b>
 
-//include connection to data base
+<span style="color: green;">//include connection to data base</span>
 
 $connection = new mysqli("localhost", "root", "yourpass", "yourdatabase");
 
